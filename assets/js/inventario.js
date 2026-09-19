@@ -1,8 +1,4 @@
 (() => {
-  const PHONE = "526144137178";
-  const WA_TEXT = "Hola, me interesa un auto de su inventario.";
-  const WA_LINK = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(WA_TEXT);
-
   const CARS = [
     { slug: "nissan-versa-2021", name: "Nissan Versa Sense", meta: "2021 · 62,000 km · Automático", price: "$259,000", type: "Sedán" },
     { slug: "chevrolet-aveo-2020", name: "Chevrolet Aveo LS", meta: "2020 · 78,500 km · Manual", price: "$215,000", type: "Sedán" },
@@ -70,8 +66,8 @@
           </div>
           <div class="car-price">${escapeHtml(car.price)}</div>
           <div class="car-actions">
-            <a href="${WA_LINK}" target="_blank" rel="noopener" class="btn btn-dark">Cotizar</a>
-            <a href="${WA_LINK}" target="_blank" rel="noopener" class="btn btn-outline-dark">Ver más</a>
+            <a href="${window.SITE_WA_LINK}" target="_blank" rel="noopener" class="btn btn-dark">Cotizar</a>
+            <a href="${window.SITE_WA_LINK}" target="_blank" rel="noopener" class="btn btn-outline-dark">Ver más</a>
           </div>
         </div>
       </article>
@@ -79,10 +75,6 @@
       )
       .join("");
   }
-
-  document.querySelectorAll("[data-wa-link]").forEach((el) => {
-    el.setAttribute("href", WA_LINK);
-  });
 
   renderFilters();
   renderCars();
