@@ -1,0 +1,475 @@
+/* AC Motors Automotriz — shared styles */
+
+:root {
+  --color-bg-dark: #0c0c0c;
+  --color-bg-light: #fff;
+  --color-text: #0c0c0c;
+  --color-accent: #b0140f;
+
+  --gray-100: #f2f2f2;
+  --gray-200: #e9e9e9;
+  --gray-300: #d9d9d9;
+  --gray-400: #8a8a8a;
+  --gray-500: #6b6b6b;
+  --gray-600: #5a5a5a;
+  --gray-700: #4a4a4a;
+  --gray-800: #2a2a2a;
+  --gray-copy-on-dark: #c4c4c4;
+  --gray-nav-on-dark: #d6d6d6;
+  --gray-footer-copy: #7d7d7d;
+
+  --font-heading: 'Montserrat', Helvetica, Arial, sans-serif;
+  --font-body: 'Barlow', Helvetica, Arial, sans-serif;
+
+  --content-max: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-light);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--color-bg-dark);
+  color: #fff;
+  border-bottom: 1px solid var(--gray-800);
+}
+
+.site-header .wrap {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: #fff;
+}
+
+.logo-main {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.logo-sub {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: var(--gray-nav-on-dark);
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.main-nav a.is-active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
+
+.nav-phone {
+  color: #fff !important;
+  border: 1px solid var(--gray-700);
+  padding: 9px 16px;
+  font-weight: 600;
+}
+
+.nav-phone:hover {
+  border-color: #fff;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 15px 26px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn-accent:hover {
+  opacity: 0.88;
+  color: #fff;
+}
+
+.btn-outline-light {
+  border: 1px solid var(--gray-700);
+  color: #fff;
+  background: transparent;
+}
+
+.btn-outline-light:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-outline-dark {
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  background: transparent;
+}
+
+.btn-outline-dark:hover {
+  background: var(--gray-100);
+  color: var(--color-text);
+}
+
+.btn-dark {
+  background: var(--color-text);
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Hero */
+
+.hero {
+  background: var(--color-bg-dark);
+  color: #fff;
+  padding: 64px 0 56px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(32px, 4.6vw, 52px);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  max-width: 22ch;
+}
+
+.hero-copy {
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--gray-copy-on-dark);
+  max-width: 52ch;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+/* Inventory section */
+
+.inventory-section {
+  padding: 32px 0 88px;
+  background: var(--color-bg-light);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--gray-300);
+  padding-bottom: 22px;
+  margin-bottom: 36px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  background: #fff;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+  padding: 10px 18px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filter-btn.is-active {
+  background: var(--color-text);
+  color: #fff;
+}
+
+.count-label {
+  font-size: 14px;
+  color: var(--gray-500);
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.car-card {
+  background: #fff;
+  border: 1px solid var(--gray-300);
+  display: flex;
+  flex-direction: column;
+}
+
+.car-card:hover {
+  border-color: var(--color-text);
+}
+
+.car-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-image: repeating-linear-gradient(135deg, var(--gray-100) 0 10px, var(--gray-200) 10px 20px);
+  border-bottom: 1px solid var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-photo span {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  color: var(--gray-400);
+  letter-spacing: 0.06em;
+}
+
+.car-body {
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.car-name {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.car-meta {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--gray-500);
+  letter-spacing: 0.04em;
+}
+
+.car-price {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.car-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.car-actions .btn {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 13px;
+}
+
+/* CTA banner */
+
+.cta-banner {
+  margin-top: 56px;
+  border: 1px solid var(--color-text);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  align-items: center;
+}
+
+.cta-banner h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+}
+
+.cta-banner p {
+  margin: 12px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-600);
+  max-width: 46ch;
+}
+
+.cta-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Footer */
+
+.site-footer {
+  background: var(--color-bg-dark);
+  color: var(--gray-copy-on-dark);
+  padding: 56px 0 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-brand .logo-main {
+  color: #fff;
+}
+
+.footer-brand .logo-sub {
+  display: block;
+  margin-top: 8px;
+}
+
+.footer-brand p {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 30ch;
+}
+
+.footer-col {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-col-title {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #fff;
+}
+
+.footer-col a.muted {
+  color: var(--gray-copy-on-dark);
+}
+
+.footer-bottom {
+  max-width: var(--content-max);
+  margin: 44px auto 0;
+  padding: 20px 24px 0;
+  border-top: 1px solid var(--gray-800);
+  font-size: 12px;
+  color: var(--gray-footer-copy);
+}
+
+/* Floating WhatsApp button */
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 60;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 16px 22px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.whatsapp-float:hover {
+  opacity: 0.9;
+  color: #fff;
+}
+
+/* Small screens */
+
+@media (max-width: 640px) {
+  .main-nav {
+    gap: 16px;
+  }
+
+  .nav-phone {
+    display: none;
+  }
+
+  .cta-banner-actions {
+    justify-content: flex-start;
+  }
+}
