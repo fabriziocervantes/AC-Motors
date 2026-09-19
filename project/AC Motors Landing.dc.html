@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #fff; color: #0c0c0c; font-family: Barlow, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #0c0c0c; text-decoration: none; }
+  a:hover { color: #6b6b6b; }
+</style>
+</helmet>
+<div style="width:100%; max-width:100%; overflow-x:hidden">
+
+  <header style="position:sticky; top:0; z-index:40; background:#0c0c0c; color:#fff; border-bottom:1px solid #2a2a2a">
+    <div style="max-width:1200px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px">
+      <div style="display:flex; align-items:baseline; gap:10px">
+        <span style="font-family:Montserrat, sans-serif; font-weight:900; font-size:20px; letter-spacing:-0.02em">AC MOTORS</span>
+        <span style="font-family:Barlow, sans-serif; font-size:11px; letter-spacing:0.22em; color:#8a8a8a; text-transform:uppercase">Automotriz</span>
+      </div>
+      <nav style="display:flex; align-items:center; gap:28px; font-size:14px; font-weight:500">
+        <a href="Inventario.dc.html" style="color:#d6d6d6">Inventario</a>
+        <a href="#financiamiento" style="color:#d6d6d6">Financiamiento</a>
+        <a href="#resenas" style="color:#d6d6d6">Reseñas</a>
+        <a href="#contacto" style="color:#d6d6d6">Contacto</a>
+        <a href="tel:6144137178" style="color:#fff; border:1px solid #4a4a4a; padding:9px 16px; font-weight:600" style-hover="border-color:#fff">614 413 7178</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="position:relative; background:#0c0c0c; color:#fff; padding:72px 24px 0; isolation:isolate">
+    <img src="uploads/WhatsApp Image 2026-09-17 at 6.49.13 PM.jpeg" alt="Lote de AC Motors Automotriz en Chihuahua" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.05); opacity:0.5; z-index:-2" />
+    <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(8,8,8,0.94) 0%, rgba(8,8,8,0.82) 45%, rgba(8,8,8,0.6) 100%); z-index:-1"></div>
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:48px; align-items:center">
+      <div style="min-width:0">
+        <p style="margin:0 0 18px; font-size:12px; letter-spacing:0.24em; text-transform:uppercase; color:#8a8a8a">Chihuahua, Chih.</p>
+        <h1 style="margin:0; font-family:Montserrat, sans-serif; font-weight:900; font-size:clamp(34px, 5vw, 58px); line-height:1.02; letter-spacing:-0.03em; text-wrap:balance">Autos seminuevos de calidad, al mejor precio en Chihuahua</h1>
+        <p style="margin:22px 0 0; font-size:17px; line-height:1.6; color:#c4c4c4; max-width:46ch">Variedad de unidades revisadas, planes de financiamiento flexibles y atención directa. Ven a verlos o pregúntanos por WhatsApp.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:32px">
+          <a href="Inventario.dc.html" style="background:#fff; color:#0c0c0c; padding:16px 28px; font-family:Montserrat, sans-serif; font-weight:700; font-size:15px" style-hover="background:#d6d6d6">Ver inventario</a>
+          <a href="{{ waLink }}" target="_blank" style="padding:16px 28px; font-family:Montserrat, sans-serif; font-weight:700; font-size:15px; color:#fff; background:{{ accent }}" style-hover="opacity:0.88">Cotizar por WhatsApp</a>
+        </div>
+      </div>
+      <div style="min-width:0">
+        <img src="uploads/WhatsApp Image 2026-09-17 at 6.44.02 PM.jpeg" alt="Audi Q8 seminuevo en el lote de AC Motors Automotriz" style="width:100%; aspect-ratio:4/3; object-fit:cover; display:block; border:1px solid #2e2e2e" />
+      </div>
+    </div>
+    <div style="max-width:1200px; margin:56px auto 0; border-top:1px solid #2a2a2a; display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr))">
+      <sc-for list="{{ trust }}" as="t" hint-placeholder-count="3">
+        <div style="padding:26px 0; border-right:1px solid #2a2a2a">
+          <div style="font-family:Montserrat, sans-serif; font-weight:800; font-size:26px; letter-spacing:-0.02em">{{ t.value }}</div>
+          <div style="margin-top:6px; font-size:13px; color:#8a8a8a; letter-spacing:0.06em; text-transform:uppercase">{{ t.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="height:56px"></div>
+  </section>
+
+  <section style="padding:88px 24px; background:#fff">
+    <div style="max-width:1200px; margin:0 auto">
+      <h2 style="margin:0 0 8px; font-family:Montserrat, sans-serif; font-weight:800; font-size:clamp(26px, 3.2vw, 38px); letter-spacing:-0.02em">Por qué elegirnos</h2>
+      <p style="margin:0 0 48px; color:#6b6b6b; font-size:16px">Trato claro, precios justos y unidades que sí puedes revisar.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1px; background:#e2e2e2; border:1px solid #e2e2e2">
+        <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+          <div style="background:#fff; padding:32px 28px">
+            <div style="font-family:ui-monospace, Menlo, monospace; font-size:12px; color:#9a9a9a">{{ b.num }}</div>
+            <h3 style="margin:18px 0 10px; font-family:Montserrat, sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.01em">{{ b.title }}</h3>
+            <p style="margin:0; font-size:15px; line-height:1.65; color:#5a5a5a">{{ b.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="financiamiento" style="background:#0c0c0c; color:#fff; padding:88px 24px">
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:56px; align-items:start">
+      <div style="min-width:0">
+        <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.24em; text-transform:uppercase; color:#8a8a8a">Financiamiento</p>
+        <h2 style="margin:0; font-family:Montserrat, sans-serif; font-weight:800; font-size:clamp(26px, 3.4vw, 40px); line-height:1.08; letter-spacing:-0.025em">Planes de crédito que se ajustan a lo que puedes pagar</h2>
+        <p style="margin:22px 0 0; font-size:16px; line-height:1.7; color:#c4c4c4; max-width:48ch">Trabajamos con distintas opciones de enganche y plazo. Te decimos con claridad cuánto pagarías al mes antes de firmar nada.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:32px">
+          <a href="{{ waLink }}" target="_blank" style="padding:16px 28px; font-family:Montserrat, sans-serif; font-weight:700; font-size:15px; color:#fff; background:{{ accent }}" style-hover="opacity:0.88">Solicitar mi plan</a>
+          <a href="tel:6144137178" style="padding:16px 28px; border:1px solid #4a4a4a; color:#fff; font-family:Montserrat, sans-serif; font-weight:700; font-size:15px" style-hover="border-color:#fff">Llamar 614 413 7178</a>
+        </div>
+      </div>
+      <div style="min-width:0; border:1px solid #2e2e2e">
+        <sc-for list="{{ finance }}" as="f" hint-placeholder-count="4">
+          <div style="padding:22px 26px; border-bottom:1px solid #2e2e2e; display:flex; gap:18px; align-items:baseline">
+            <span style="font-family:ui-monospace, Menlo, monospace; font-size:12px; color:#7d7d7d; min-width:24px">{{ f.num }}</span>
+            <div>
+              <div style="font-family:Montserrat, sans-serif; font-weight:700; font-size:16px">{{ f.title }}</div>
+              <div style="margin-top:6px; font-size:14px; color:#a8a8a8; line-height:1.6">{{ f.text }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="resenas" style="padding:88px 24px; background:#fff">
+    <div style="max-width:1200px; margin:0 auto">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:24px; margin-bottom:44px">
+        <div style="font-family:Montserrat, sans-serif; font-weight:900; font-size:56px; letter-spacing:-0.04em; line-height:1">4.5</div>
+        <div>
+          <div style="font-size:20px; letter-spacing:0.12em; color:#0c0c0c">★★★★★</div>
+          <div style="margin-top:6px; font-size:14px; color:#6b6b6b">39 reseñas de clientes en Google</div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:28px">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+          <blockquote style="margin:0; border-top:2px solid #0c0c0c; padding-top:24px">
+            <p style="margin:0; font-size:17px; line-height:1.6; text-wrap:pretty">“{{ r.text }}”</p>
+            <footer style="margin-top:20px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:#6b6b6b">{{ r.name }}</footer>
+          </blockquote>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" style="padding:0 24px 88px; background:#fff">
+    <div style="max-width:1200px; margin:0 auto; border:1px solid #d9d9d9; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr))">
+      <div style="padding:44px 40px">
+        <h2 style="margin:0 0 28px; font-family:Montserrat, sans-serif; font-weight:800; font-size:clamp(24px, 3vw, 34px); letter-spacing:-0.02em">Visítanos</h2>
+        <div style="display:grid; gap:22px; font-size:16px; line-height:1.6">
+          <div>
+            <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8a8a8a; margin-bottom:6px">Dirección</div>
+            Rep. de Perú 213, Panamericana,<br />31210 Chihuahua, Chih.
+          </div>
+          <div>
+            <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8a8a8a; margin-bottom:6px">Horario</div>
+            Cierra a las 6 p.m.
+          </div>
+          <div>
+            <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8a8a8a; margin-bottom:6px">Teléfono</div>
+            <a href="tel:6144137178" style="font-family:Montserrat, sans-serif; font-weight:700; font-size:20px">614 413 7178</a>
+          </div>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:34px">
+          <a href="{{ waLink }}" target="_blank" style="padding:15px 26px; color:#fff; background:{{ accent }}; font-family:Montserrat, sans-serif; font-weight:700; font-size:14px" style-hover="opacity:0.88">Escribir por WhatsApp</a>
+          <a href="{{ mapLink }}" target="_blank" style="padding:15px 26px; border:1px solid #0c0c0c; font-family:Montserrat, sans-serif; font-weight:700; font-size:14px" style-hover="background:#f2f2f2">Cómo llegar</a>
+        </div>
+      </div>
+      <div style="min-height:340px; border-left:1px solid #d9d9d9; filter:grayscale(1) contrast(1.05)">
+        <iframe title="Mapa AC Motors Automotriz" src="{{ mapEmbed }}" style="width:100%; height:100%; min-height:340px; border:0; display:block" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0c0c0c; color:#c4c4c4; padding:56px 24px 32px">
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:40px">
+      <div>
+        <div style="font-family:Montserrat, sans-serif; font-weight:900; font-size:20px; color:#fff; letter-spacing:-0.02em">AC MOTORS</div>
+        <div style="margin-top:8px; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#8a8a8a">Automotriz</div>
+        <p style="margin:18px 0 0; font-size:14px; line-height:1.7; max-width:30ch">Autos seminuevos revisados en Chihuahua. Buen trato y precios claros.</p>
+      </div>
+      <div style="font-size:14px; line-height:2">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8a8a8a; margin-bottom:10px">Contacto</div>
+        <div>Rep. de Perú 213, Panamericana</div>
+        <div>31210 Chihuahua, Chih.</div>
+        <div><a href="tel:6144137178" style="color:#fff">614 413 7178</a></div>
+        <div>Cierra a las 6 p.m.</div>
+      </div>
+      <div style="font-size:14px; line-height:2">
+        <div style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8a8a8a; margin-bottom:10px">Síguenos</div>
+        <div><a href="#" style="color:#c4c4c4">Facebook</a></div>
+        <div><a href="#" style="color:#c4c4c4">Instagram</a></div>
+        <div><a href="{{ waLink }}" target="_blank" style="color:#c4c4c4">WhatsApp</a></div>
+      </div>
+    </div>
+    <div style="max-width:1200px; margin:44px auto 0; padding-top:20px; border-top:1px solid #2a2a2a; font-size:12px; color:#7d7d7d">© 2026 AC Motors Automotriz. Todos los derechos reservados.</div>
+  </footer>
+
+  <a href="{{ waLink }}" target="_blank" style="position:fixed; right:22px; bottom:22px; z-index:60; background:{{ accent }}; color:#fff; padding:16px 22px; font-family:Montserrat, sans-serif; font-weight:700; font-size:14px; box-shadow:0 8px 24px rgba(0,0,0,0.28)" style-hover="opacity:0.9">WhatsApp</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#b0140f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#b0140f&quot;,&quot;#9a7b2f&quot;,&quot;#0c0c0c&quot;],&quot;section&quot;:&quot;CTA&quot;},&quot;monochromeCtas&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;CTA&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const mono = this.props.monochromeCtas ?? false;
+    const accent = mono ? "#0c0c0c" : (this.props.accentColor ?? "#b0140f");
+    const phone = "526144137178";
+    return {
+      accent,
+      waLink: "https://wa.me/" + phone + "?text=" + encodeURIComponent("Hola, me interesa un auto de su inventario."),
+      mapLink: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Rep. de Perú 213, Panamericana, 31210 Chihuahua, Chih."),
+      mapEmbed: "https://maps.google.com/maps?q=" + encodeURIComponent("Rep. de Peru 213, Panamericana, 31210 Chihuahua, Chih.") + "&z=15&output=embed",
+      trust: [
+        { value: "4.5 ★", label: "39 reseñas" },
+        { value: "+10 años", label: "de experiencia" },
+        { value: "Revisadas", label: "unidad por unidad" },
+      ],
+      benefits: [
+        { num: "01", title: "Variedad de inventario", text: "Sedanes, hatchbacks y pick-ups seminuevas, con opciones para distintos presupuestos." },
+        { num: "02", title: "Financiamiento flexible", text: "Planes con enganche y plazo ajustables. Te explicamos el pago mensual desde el inicio." },
+        { num: "03", title: "Atención personalizada", text: "Te atendemos directamente, contestamos todas tus preguntas y sin presión para cerrar." },
+        { num: "04", title: "Garantía y revisión", text: "Cada unidad pasa revisión mecánica y documental antes de salir del lote." },
+      ],
+      cars: [
+        { slug: "nissan-versa-2021", name: "Nissan Versa Sense", meta: "2021 · 62,000 km · Automático", price: "$259,000" },
+        { slug: "chevrolet-aveo-2020", name: "Chevrolet Aveo LS", meta: "2020 · 78,500 km · Manual", price: "$215,000" },
+        { slug: "mazda3-2019", name: "Mazda 3 i Touring", meta: "2019 · 84,000 km · Automático", price: "$289,000" },
+        { slug: "kia-rio-2021", name: "Kia Rio LX", meta: "2021 · 51,000 km · Automático", price: "$249,000" },
+        { slug: "ford-ranger-2019", name: "Ford Ranger XL", meta: "2019 · 96,000 km · Diésel", price: "$389,000" },
+        { slug: "toyota-hilux-2018", name: "Toyota Hilux Base", meta: "2018 · 112,000 km · Manual", price: "$429,000" },
+      ],
+      finance: [
+        { num: "01", title: "Enganche desde acuerdo", text: "Definimos juntos el enganche que se acomode a tu situación." },
+        { num: "02", title: "Plazos de 12 a 48 meses", text: "Entre más corto el plazo, menos pagas de intereses. Te mostramos las dos opciones." },
+        { num: "03", title: "Trámite sencillo", text: "Identificación, comprobante de ingresos y domicilio. Respuesta rápida." },
+        { num: "04", title: "Aceptamos tu auto a cuenta", text: "Valuamos tu unidad actual y la tomamos como parte del pago." },
+      ],
+      reviews: [
+        { text: "El encargado muy amable contestó todas mis preguntas, gran variedad de autos y buenos planes de financiamiento.", name: "Juan Baez" },
+        { text: "Excelente servicio al cliente y buenos vehículos.", name: "Sandra Loya Sánchez" },
+        { text: "Servicio, precio y bastante de dónde seleccionar carros seminuevos.", name: "David RP" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
